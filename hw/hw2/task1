@@ -1,7 +1,7 @@
 let number = 20;
+let bulbsNumbers = [2, 3, 8];
 let array = Array(number);
 let bulbsArray = Array.from(array,(x) => {return false});
-let bulbsNumbers = [2, 3, 8];
 
 for(let ch = 0; ch < bulbsNumbers.length; ch++){
     for(let ch1 = 0; ch1 < bulbsArray.length; ch1++){

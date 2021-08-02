@@ -2,11 +2,14 @@
 class StringFormatter {
   removeNonUniqueChars(string) {
     let stringWithoutDoubleChars = "";
-    for (let counter = 0; counter < string.length; counter++) {
-      if (stringWithoutDoubleChars.indexOf(string[counter]) === -1) {
-        stringWithoutDoubleChars += string[counter];
+    string = string.split("");
+    stringWithoutDoubleChars = string.reduce((char1, char2) => {
+      if (char1.indexOf(char2) === -1) {
+        return char1 + char2;
       }
-    }
+      return char1;
+    });
+
     return stringWithoutDoubleChars;
   }
 }
@@ -17,15 +20,17 @@ console.log(stringWithoutDoubleChars.removeNonUniqueChars("Hello,, world55"));
 class StringFormatterForNumbers extends StringFormatter {
   removeNonUniqueChars(string) {
     let stringWithoutDoubleNumbers = "";
-    for (let counter = 0; counter < string.length; counter++) {
-      if (isNaN(string[counter])) {
-        stringWithoutDoubleNumbers += string[counter];
+    string = string.split("");
+    stringWithoutDoubleNumbers = string.reduce((char1, char2) => {
+      if (isNaN(char2)) {
+        return char1 + char2;
       } else {
-        if (stringWithoutDoubleNumbers.indexOf(string[counter]) === -1) {
-          stringWithoutDoubleNumbers += string[counter];
+        if (char1.indexOf(char2) === -1) {
+          return char1 + char2;
         }
+        return char1;
       }
-    }
+    });
     return stringWithoutDoubleNumbers;
   }
 }

@@ -9,10 +9,13 @@ class Users {
     let url = `https://randomuser.me/api/?results=${this.numberOfUsers}`;
     let usersData = await this.makeGetRequest(url);
     let users = "";
-    for (let key in usersData["results"]) {
-      let user = this.formatingUserData(usersData["results"][key]);
-      users += user + "\n\n";
-    }
+
+    usersData["results"][0] =
+      this.formatingUserData(usersData["results"][0]) + "\n\n";
+    users = usersData["results"].reduce((user1, user2) => {
+      user2 = this.formatingUserData(user2);
+      return user1 + user2 + "\n\n";
+    });
     return users;
   }
 

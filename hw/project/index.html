@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical app</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Queue page -->
+      <div class="queue-wrapper">
+        <div class="queue__title title" for="">The Queue</div>
+        <section class="queue section">
+          <div id="currentPatient" class="queue__patient">
+            <span>Current patient:</span>
+            <ol class="queue__patient-queue list" id="queue"></ol>
+            <div id="currentPatientName"></div>
+          </div>
+          <div>
+            <span class="queue__patient-form-title">Fill the form: </span>
+            <form
+              class="queue__patient-form"
+              id="formForAddingPatient"
+              action=""
+            >
+              <ul>
+                <li>
+                  <input id="inputToSetName" type="text" placeholder="Name" />
+                </li>
+                <li>
+                  <input
+                    id="inputToSetReason"
+                    type="text"
+                    placeholder="Why are you here?"
+                  />
+                </li>
+              </ul>
+
+              <button class="queue__button-add" id="buttonAddPatient">
+                Add
+              </button>
+            </form>
+          </div>
+        </section>
+        <section class="patient-search section">
+          <form id="formForPatientSearch" action="">
+            <input
+              id="inputForPatientSearch"
+              type="text"
+              placeholder="Type something"
+            />
+            <button>Search</button>
+          </form>
+          <ol
+            id="listForPatientSearchResult"
+            class="patient-search-list list"
+          ></ol>
+        </section>
+      </div>
+
+      <!-- Managment page -->
+      <div class="doctorspage-wrapper">
+        <div class="title" for="">Doctor's page</div>
+        <section class="curren-patient section">
+          <div>
+            <div id="currentPatientForDoctor">
+              <span>Current patient:</span>
+              <span id="spanForNextPatient"></span>
+            </div>
+            <div class="next-patient">
+              <button class="button-next" id="next">Next</button>
+              <div>Click "next" to process patient</div>
+            </div>
+          </div>
+
+          <div class="setResolution">
+            <span>Set appointment resolution:</span>
+            <form class="resolution-form" id="formForResolution">
+              <input id="inputToSetResolution" type="text" />
+              <button id="buttonAddResolution">Add</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="doctor-search section">
+          <form id="formForDoctorSearch" action="">
+            <input
+              id="inputForDoctorSearch"
+              type="text"
+              placeholder="Type something"
+            />
+            <button>Search</button>
+          </form>
+          <div class="doctor-search-form">
+            <ol
+              id="listForDoctorSearchResult"
+              class="doctor-search-list list"
+            ></ol>
+            <button id="deletePatientButton" class="button-delete">
+              Delete
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="src/js/script.js"></script>
+  </body>
+</html>

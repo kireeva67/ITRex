@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  background-color: #f0ecec;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+/* 
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.queue-wrapper,
+.doctorspage-wrapper {
+  padding: 1em 3em;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+  padding: 40px;
+  margin-bottom: 4px;
+  border: 2px solid #d1cfcf;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.queue__patient-form-title {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 2px 5px;
+  margin-bottom: 10px;
+}
+
+.queue__patient {
+  display: flex;
+  margin-right: 2em;
+}
+
+.queue__patient-queue {
+  margin-left: 1.5em;
+}
+
+button {
+  padding: 2.5px 6px;
+  background-color: #d0daeb;
+  border-width: 1px;
+}
+
+.button-next {
+  padding: 2.5px 20px;
+  margin: 20px 0 10px;
+}
+
+.resolution-form {
+  margin-top: 20px;
+}
+
+.list {
+  width: 400px;
+  height: 100px;
+}
+
+.doctor-search-form {
+  text-align: right;
+}
+
+.doctor-search-list,
+.patient-search-list {
+  margin-top: -5px;
+  font-size: 12px;
+  text-align: left;
+  background-color: aliceblue;
+  padding: 20px;
+  margin-bottom: 10px;
+  outline: 1px solid #e5e5e5;
+}
+
+.button-delete {
+  color: #fff;
+  background-color: #b83131;
+}
